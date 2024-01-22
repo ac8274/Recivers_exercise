@@ -30,6 +30,6 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences settings=getSharedPreferences("BOOT_PREFS",MODE_PRIVATE);
         int TurnedOnTimes = settings.getInt("TurnedOn",0);
-
+        textView4.setText(Integer.toString(TurnedOnTimes));
     }
 }
