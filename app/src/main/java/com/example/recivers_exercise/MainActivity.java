@@ -2,6 +2,7 @@ package com.example.recivers_exercise;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -26,5 +27,9 @@ public class MainActivity extends AppCompatActivity {
         textView6 = findViewById(R.id.textView6);
         textView7 = findViewById(R.id.textView7);
         textView8 = findViewById(R.id.textView8);
+
+        SharedPreferences settings=getSharedPreferences("BOOT_PREFS",MODE_PRIVATE);
+        int TurnedOnTimes = settings.getInt("TurnedOn",0);
+
     }
 }
